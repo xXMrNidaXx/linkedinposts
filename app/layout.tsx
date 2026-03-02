@@ -49,10 +49,38 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'LinkedInPosts',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '9.00',
+      priceCurrency: 'USD',
+      priceValidUntil: '2026-12-31',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '127',
+    },
+    creator: {
+      '@type': 'Organization',
+      name: 'RevolutionAI',
+      url: 'https://revolutionai.io',
+    },
+  };
+
   return (
     <html lang="en">
       <head>
         <meta name="theme-color" content="#0ea5e9" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>{children}</body>
     </html>
