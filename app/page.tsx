@@ -191,9 +191,9 @@ export default function Home() {
               <li>✓ Advanced tones</li>
               <li>✓ Save favorites</li>
             </ul>
-            <button className="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-bold transition">
+            <a href="https://buy.stripe.com/8x25kw6y5fcwehK5BmeQM04" className="block w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-bold transition text-center">
               Upgrade to Pro
-            </button>
+            </a>
           </div>
         </div>
       </div>
